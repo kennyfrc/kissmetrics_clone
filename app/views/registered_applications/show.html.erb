@@ -1,0 +1,15 @@
+<h1><%= @registered_application.name %></h1>
+ 
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead"><%= @registered_application.url %></p>
+    <%= link_to "Back to Index", registered_applications_path, class: "btn btn-info" %>
+    <%= link_to "Edit Application Details", edit_registered_application_path, class: "btn btn-primary" %>
+    <%= link_to "Delete Application", registered_application_path, class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure that you want to elete this?"}%>
+  </div>
+
+  <div class = "media-heading">
+      
+  </div>
+</div>
+

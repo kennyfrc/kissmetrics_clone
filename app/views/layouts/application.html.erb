@@ -11,6 +11,12 @@
   <div class = "container">
   <div class="container">
     <ul>
+      <ul class="nav nav-tabs">
+        <li> <%= link_to "Home", root_path %></li>
+        <li> <%= link_to "Registered Apps", registered_applications_path %> </li>
+
+      
+
       <div class = "pull-right user-info">
         <% if current_user %>
             Hello <%= current_user.email %>!
@@ -27,7 +33,8 @@
         <% end %> 
       </div>
     </ul>
-  </div>
+  </ul>
+ 
 
 <div class='container'>
   <div class= 'container'>
@@ -48,11 +55,13 @@
       </div>
     <% end %>
   </div>
+   </div>
 
 
 <%= yield %>
 
-</div>
 
+</div>
+</div>
 </body>
 </html>
