@@ -3,6 +3,15 @@
 <div class="row">
   <div class="col-md-8">
     <p class="lead"><%= @registered_application.url %></p>
+    <p> Events related to <%= @registered_application.name %>: </p>
+    <% @events.each do |key, array| %>
+      "<%= array.count %> <%= key %> events" happened:
+        <% array.each do |e| %>
+        <ul>
+          <li> <%= e.created_at %> </li>
+        </ul>
+        <% end %>
+    <% end %>
     <%= link_to "Back to Index", registered_applications_path, class: "btn btn-info" %>
     <%= link_to "Edit Application Details", edit_registered_application_path, class: "btn btn-primary" %>
     <%= link_to "Delete Application", registered_application_path, class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure that you want to elete this?"}%>

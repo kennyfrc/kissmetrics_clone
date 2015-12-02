@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
+gem 'faker'
+
 gem 'validate_url'
 gem 'devise'
 gem 'figaro'
