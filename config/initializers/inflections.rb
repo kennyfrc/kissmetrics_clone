@@ -14,3 +14,7 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+ ActiveSupport::Inflector.inflections(:en) do |inflect| #enables you to use teh API as the namespace, instead of the non-acronymed Api namespace
+   inflect.acronym 'API'
+ end
