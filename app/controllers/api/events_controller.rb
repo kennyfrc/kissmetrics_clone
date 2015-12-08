@@ -9,6 +9,8 @@ class API::EventsController < ApplicationController
     headers['Access-Control-Allow-Headers'] = 'Content-Type' #used in HTTP requests to declatre the tyep of data being sent
   end
 
+
+
   def create
     registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
 
